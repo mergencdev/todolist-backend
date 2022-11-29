@@ -1,21 +1,25 @@
 package com.mergenc.plugins
 
-import io.ktor.server.routing.*
-import io.ktor.http.*
+import com.mergenc.entities.ToDo
 import io.ktor.server.application.*
 import io.ktor.server.response.*
-import io.ktor.server.request.*
+import io.ktor.server.routing.*
 
 fun Application.configureRouting() {
-
     // Starting point for a Ktor app:
     routing {
+        val todos = listOf<ToDo>(
+            ToDo(1, "Homework", true),
+            ToDo(2, "Internet Programlama", false),
+            ToDo(3, "Backend", true),
+        )
+
         get("/") {
             call.respondText("Hello World!")
         }
 
         get("/todos") {
-
+            call.respond(todos)
         }
 
         get("/todos/{id}") {
