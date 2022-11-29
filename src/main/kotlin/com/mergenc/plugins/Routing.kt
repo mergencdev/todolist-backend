@@ -13,7 +13,27 @@ fun Application.configureRouting() {
         get("/") {
             call.respondText("Hello World!")
         }
+
+        get("/todos") {
+
+        }
+
+        get("/todos/{id}") {
+            val id = call.parameters["id"]
+            call.respondText("Todolist details: #$id")
+        }
+
+        post("/todos") {
+
+        }
+
+        put("/todos/{id}") {
+
+        }
+
+        delete("/todos/{id}") {
+
+        }
     }
-    routing {
-    }
+    routing {}
 }
