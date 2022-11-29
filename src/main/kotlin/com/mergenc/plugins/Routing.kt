@@ -86,5 +86,4 @@ fun Application.configureRouting() {
             }
         }
     }
-    routing {}
 }
