@@ -33,4 +33,7 @@ dependencies {
 
     // https://mvnrepository.com/artifact/io.ktor/ktor-gson
     implementation("io.ktor:ktor-gson:1.6.8")
+    implementation("mysql:mysql-connector-java:8.0.30")
+    implementation("org.ktorm:ktorm-core:3.5.0")
+    implementation("org.ktorm:ktorm-support-mysql:3.5.0")
 }
